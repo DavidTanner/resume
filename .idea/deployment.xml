@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" autoUpload="Always" serverName="resume" uploadOnCheckin="242d8fb7-6975-4fec-b77d-12f7228db92e">
+    <serverData>
+      <paths name="resume">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+    <option name="myUploadOnCheckinName" value="resume" />
+    <option name="myAutoUpload" value="ALWAYS" />
+  </component>
+</project>
+
