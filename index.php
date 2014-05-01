@@ -6,17 +6,20 @@
  * Time: 10:58 PM
  */
 
+$parent = "accordian_section";
+
 ?>
 <!DOCTYPE html>
 <html>
 <head>
     <title>Professional Me</title>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=device-width user-scalable=no">
 
     <link rel="shortcut icon" type="image/x-icon" href="FAVICON.ICO">
-    <link href="css/bootstrap-theme.min.css" type="text/css">
-    <link href="css/bootstrap.min.css" type="text/css">
+    <link rel='stylesheet' href="css/bootstrap-theme.min.css" type="text/css">
+    <link rel='stylesheet' href="css/bootstrap.min.css" type="text/css">
+    <link rel='stylesheet' href="css/jumbotron-narrow.css" type="text/css">
     <link href='http://fonts.googleapis.com/css?family=Paytone+One' rel='stylesheet' type='text/css'>
 
     <script type="text/javascript" src="js/jquery-2.1.0.min.js"></script>
@@ -24,13 +27,9 @@
 
     <style type="text/css">
 
-        #title {
-            text-align: center;
+        body {
             font-family: Verdana, serif;
             color: #00275d;
-        }
-        #title h1, h2, h3, h4 {
-            margin: 0 0 0 0;
         }
 
         #title h4 {
@@ -51,21 +50,35 @@
                 .025em .025em 0 #dab37b;
         }
 
-        @media only screen and (max-width: 600px) {
-            .hide-small {
-                display: none !important;
-            }
+        hr {
+            color: #dab37b;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            border-top: 2px solid #dab37b;
         }
+
+        .panel-group p {
+            text-indent: 5%;
+        }
+
+
 
     </style>
 </head>
 <body>
-<div id="title">
-    <h1><span>&nbsp;David Tanner&nbsp;</span></h1>
-    <h4>CELL&nbsp;<a href="tel:(801) 810-6443">(801) 810-6443</a></h4>
-    <h4 class="hide-small">&nbsp;|&nbsp;</h4>
-    <h4>EMAIL&nbsp;<a href="mailto:david.joel.tanner@gmail.com">david.joel.tanner@gmail.com</a></h4>
-</div>
+<div class="container">
+    <div class="row">
+        <div id="title" class="col-sm-12 text-center">
+            <h1><span>&nbsp;David Tanner&nbsp;</span></h1>
+            <h4>CELL&nbsp;<a href="tel:(801) 810-6443">(801) 810-6443</a></h4>
+            <h4 class="hidden-xs">&nbsp;|&nbsp;</h4>
+            <h4>EMAIL&nbsp;<a href="mailto:david.joel.tanner@gmail.com">david.joel.tanner@gmail.com</a></h4>
+        </div>
+    </div>
+    <hr size="4">
 
-</body>
-</html>
+    <div class="panel-group" id="<?php echo $parent;?>">
+        <?php  include "src/profile.php";?>
+    </div>
+</div>
+<?php include "src/footer.php";?>
