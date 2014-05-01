@@ -27,4 +27,8 @@ pride in making sure I do a good job, and that it is something I can be proud of
 </p>
 ";
 
-create_collapse($parent, "profile", true, "Profile", $profile);
+$sections[] = array("entry"=>"profile", "body"=>$profile, "in_collapse"=>true);
+
+create_collapse_button($parent, "profile", "Profile");
+
+

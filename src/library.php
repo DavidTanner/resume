@@ -6,25 +6,25 @@
  * Time: 9:24 PM
  */
 
-function create_collapse($parent, $entry, $in_collapse, $title, $body) {
+function create_collapse_button($parent, $entry, $title) {
     ?>
-    <div>
-        <div>
-            <h4>
-                <div data-toggle="buttons">
-                    <label class="btn btn-primary" data-toggle="collapse" data-parent="#<?php echo $parent;?>" href="#<?php echo $entry;?>">
-                        <input type="checkbox">
-                        <?php echo $title;?>
-                    </label>
-                </div>
-            </h4>
-        </div>
-        <div id="<?php echo $entry;?>" class="panel-collapse collapse <?php echo $in_collapse ? "in" : "";?>">
-            <div class="panel-body">
-                <?php echo $body;?>
-            </div>
-        </div>
+    <div data-toggle="buttons">
+        <label class="btn btn-primary" data-toggle="collapse" data-parent="#<?php echo $parent;?>" href="#<?php echo $entry;?>">
+            <input type="checkbox">
+            <?php echo $title;?>
+        </label>
     </div>
 
+<?php
+}
+
+function create_collapse_body($entry, $body, $in_collapse) {
+?>
+    <div id="<?php echo $entry;?>" class="panel-collapse collapse <?php echo $in_collapse ? "in" : "";?>">
+        <hr>
+        <div class="panel-body">
+            <?php echo $body;?>
+        </div>
+    </div>
 <?php
 }

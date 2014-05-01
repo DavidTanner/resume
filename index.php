@@ -36,6 +36,10 @@ $parent = "accordian_section";
             display: inline-block;
         }
 
+        #accordian-buttons div{
+            display: inline-block;
+        }
+
         .wgb a, #title a {
             color: inherit;
         }
@@ -83,10 +87,25 @@ $parent = "accordian_section";
             <h4>EMAIL&nbsp;<a href="mailto:david.joel.tanner@gmail.com">david.joel.tanner@gmail.com</a></h4>
         </div>
     </div>
-    <hr size="4">
+    <hr>
 
     <div class="panel-group" id="<?php echo $parent;?>">
-        <?php  include "src/profile.php";?>
+        <div>
+            <div id="accordian-buttons">
+                <h4>
+<?php
+    $sections = array();
+    include "src/profile.php";
+?>
+                </h4>
+            </div>
+<?php
+    foreach ($sections as $section) {
+        create_collapse_body($section["entry"], $section["body"], $section["in_collapse"]);
+    }
+?>
+        </div>
+        <hr>
     </div>
 </div>
 <?php include "src/footer.php";?>
