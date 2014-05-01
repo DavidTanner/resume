@@ -8,12 +8,15 @@
 
 function create_collapse($parent, $entry, $in_collapse, $title, $body) {
     ?>
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <h4 class="panel-title">
-                <a data-toggle="collapse" data-parent="#<?php echo $parent;?>" href="#<?php echo $entry;?>">
-                    <?php echo $title;?>
-                </a>
+    <div>
+        <div>
+            <h4>
+                <div data-toggle="buttons">
+                    <label class="btn btn-primary" data-toggle="collapse" data-parent="#<?php echo $parent;?>" href="#<?php echo $entry;?>">
+                        <input type="checkbox">
+                        <?php echo $title;?>
+                    </label>
+                </div>
             </h4>
         </div>
         <div id="<?php echo $entry;?>" class="panel-collapse collapse <?php echo $in_collapse ? "in" : "";?>">

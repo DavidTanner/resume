@@ -36,11 +36,19 @@ $parent = "accordian_section";
             display: inline-block;
         }
 
-        #title a {
+        .wgb a, #title a {
             color: inherit;
         }
 
-        #title h1 span {
+        .wgb a:active, .wgb a:hover {
+            color: white;
+        }
+
+        label.btn-primary {
+            background-color: #00275d;
+        }
+
+        .wgb {
             color: white;
             background-color: #00275d;
             text-shadow:
@@ -69,7 +77,7 @@ $parent = "accordian_section";
 <div class="container">
     <div class="row">
         <div id="title" class="col-sm-12 text-center">
-            <h1><span>&nbsp;David Tanner&nbsp;</span></h1>
+            <h1><span class="wgb">&nbsp;David Tanner&nbsp;</span></h1>
             <h4>CELL&nbsp;<a href="tel:(801) 810-6443">(801) 810-6443</a></h4>
             <h4 class="hidden-xs">&nbsp;|&nbsp;</h4>
             <h4>EMAIL&nbsp;<a href="mailto:david.joel.tanner@gmail.com">david.joel.tanner@gmail.com</a></h4>
