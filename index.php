@@ -6,6 +6,7 @@
  * Time: 10:58 PM
  */
 
+include "src/library.php";
 $parent = "accordian_section";
 
 ?>
@@ -96,6 +97,8 @@ $parent = "accordian_section";
 <?php
     $sections = array();
     include "src/profile.php";
+    include "src/lds_church.php";
+    include "src/inthinc.php";
 ?>
                 </h4>
             </div>
